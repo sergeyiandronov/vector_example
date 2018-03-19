@@ -218,3 +218,11 @@ vector2.push_back(1);
    
 
 }
+TEST_CASE("out of range exception"){
+   vector_t<int> vector;
+   vector.push_back(1);
+   vector.push_back(2);
+   int a;
+   REQUIRE_NOTHROW(a=vector[1]);
+
+}
