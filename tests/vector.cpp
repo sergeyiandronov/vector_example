@@ -223,6 +223,6 @@ TEST_CASE("out of range exception"){
    vector.push_back(1);
    vector.push_back(2);
    int a;
-   REQUIRE_NOTHROW(a=vector[1]);
-
+   REQUIRE_NOTHROW(a=vector.at(1));
+   REQUIRE_THROWS(a=vector.at(100));
 }
